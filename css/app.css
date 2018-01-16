@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+  box-sizing: border-box;
+}
+html {
+background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+html, body {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+}
+.login {
+  background: #eee;
+  border-radius:10px;
+  padding: 20px;
+  width: 320px;
+
+}
+
+.login h3 {
+  margin: 0 auto 10px;
+}
+
+.login input{
+  margin: 10px auto 0;
+  padding: 15px;
+  display: block;
+  width: 260;
+}
+
+ .login input [type=submit] {
+   background: #ccc
+   border: none;
+   border-radius: 4;
+   color: #fff;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+ }

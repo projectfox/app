@@ -8,7 +8,7 @@
    $password = $_POST['password'];
 
    $username = mysqli_real_escape_string($connection, $username);
-   $username = mysqli_real_escape_string($connection, $password);
+   $password = mysqli_real_escape_string($connection, $password);
 
    $query = "SELECT * FROM  users WHERE username = '{$username}' ";
    $select_user_query = mysqli_query($connection, $query);
@@ -17,19 +17,21 @@
      die('query faild'). mysqli_error($connection);
    }
 
+   $db_username = '';
+   $db_password = '';
    while ($row = mysqli_fetch_array($select_user_query)) {
     $db_id = $row['id'];
     $db_username = $row['username'];
     $db_password = $row['password'];
-
    }
-   $password  = ceypt($password, $db_password);
+   $password  = crypt($password, $db_password);
+
    if ($username === $db_username && $password === $db_password) {
      $_SESSION['username'] = $db_username;
      header("Location: index.php");
    }
    else {
-     $errorMessage = "<p>Inloggningen misslyckades!</p>";
+     $errorMessage = "<script type='text/javascript'>alert('Inloggningen misslyckades!')</script>";
    }
   }
  ?>
@@ -51,5 +53,7 @@
   <a href="register.php">ny användare? registera dig här<a/>
   <?php echo $errorMessage; ?>
 </form>
+
+
 </body>
 </html>

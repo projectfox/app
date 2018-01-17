@@ -8,7 +8,7 @@
    $password = $_POST['password'];
 
    $username = mysqli_real_escape_string($connection, $username);
-   $username = mysqli_real_escape_string($connection, $password);
+   $password = mysqli_real_escape_string($connection, $password);
 
    $heasFormat = "$2y$10$";
    $salt = "dsfdsdferfefsfgsdf92sf";
@@ -21,9 +21,11 @@
 
    $result = mysqli_query($connection, $query);
 
-    if (!$result) {
-      die("Query faild") . mysqli_error($connection);
+   if (!$result) {
+     die("Query faild") . mysqli_error($connection);
     }
+
+   header("Location: login.php");
 
    }
    $title = 'registrera';

@@ -3,7 +3,7 @@
   session_start();
   $errorMessage = '';
 
-  if (isset($_POST['login'])){
+  if (isset($_POST['register'])){
    $username = $_POST['username'];
    $password = $_POST['password'];
 
@@ -43,12 +43,11 @@
 </head>
 <body>
 
-<form class="login animated fadeInDown" action="login.php" method="post">
-  <h3>Logga in</h3>
+<form class="login animated fadeInDown" action="register.php" method="post">
+  <h3>registrera</h3>
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
-  <input type="submit" name="login" value="Logga in">
-  <a href="register.php">ny användare? registera dig här<a/>
+  <input type="submit" name="register" value="Registrera">
   <?php echo $errorMessage; ?>
 </form>
 </body>

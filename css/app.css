@@ -32,8 +32,8 @@ margin: 0;
 }
 
 .login input{
-  margin: 10px auto 0;
-  padding: 15px;
+  margin: 20px auto 0;
+  padding: 20px;
   display: block;
   width: 260;
 }
@@ -41,9 +41,18 @@ margin: 0;
  .login input [type=submit] {
    background: #ccc
    border: none;
-   border-radius: 4;
+   border-radius: 10;
    color: #fff;
    font-weight: bold;
    text-transform: uppercase;
-   letter-spacing: 1px;
+   letter-spacing: 10px;
  }
+.login input[type=submit]:hover {
+  background: #ffff
+ }
+.login a{
+  color: black;
+  display: block;
+  font-size: 14px;
+  margin: 10px auto 0;
+}

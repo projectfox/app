@@ -10,28 +10,24 @@
    $username = mysqli_real_escape_string($connection, $username);
    $username = mysqli_real_escape_string($connection, $password);
 
-   $query = "SELECT * FROM  users WHERE username = '{$username}' ";
-   $select_user_query = mysqli_query($connection, $query);
+   $heasFormat = "$2y$10$";
+   $salt = "dsfdsdferfefsfgsdf92sf";
 
-   if (!$select_user_query){
-     die('query faild'). mysqli_error($connection);
-   }
+   $hash_end_salt = $heasFormat . $salt;
+   $password = crypt($password, $hash_end_salt);
 
-   while ($row = mysqli_fetch_array($select_user_query)) {
-    $db_id = $row['id'];
-    $db_username = $row['username'];
-    $db_password = $row['password'];
+   $query = "INSERT INTO users(username, password)";
+   $query .= "VALUES('$username', '$password')";
+
+   $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+      die("Query faild") . mysqli_error($connection);
+    }
 
    }
-
-   if ($username === $db_username && $password === $db_password) {
-     $_SESSION['username'] = $db_username;
-     header("Location: index.php");
-   }
-   else {
-     $errorMessage = "<p>Inloggningen misslyckades!</p>";
-   }
-  }
+   $title = 'registrera';
+   include "includes/header.php";
  ?>
 <!DOCTYPE html>
 <html>

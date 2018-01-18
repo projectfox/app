@@ -14,17 +14,17 @@
    $select_user_query = mysqli_query($connection, $query);
 
    if (!$select_user_query){
-     die('query faild'). mysqli_error($connection);
+     die('Query faild') . mysqli_error($connection);
    }
 
-   $db_username = '';
-   $db_password = '';
+   $db_username = 'l';
+   $db_password = 'l';
    while ($row = mysqli_fetch_array($select_user_query)) {
     $db_id = $row['id'];
     $db_username = $row['username'];
     $db_password = $row['password'];
    }
-   $password  = crypt($password, $db_password);
+   $password = crypt($password, $db_password);
 
    if ($username === $db_username && $password === $db_password) {
      $_SESSION['username'] = $db_username;
@@ -50,7 +50,7 @@
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
   <input type="submit" name="login" value="Logga in">
-  <a href="register.php">ny användare? registera dig här<a/>
+  <a href="register.php">Registera dig här<a/>
   <?php echo $errorMessage; ?>
 </form>
 

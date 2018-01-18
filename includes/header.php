@@ -1,3 +1,7 @@
+<?php
+  include "db.php";
+  include "functions.php";
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +11,3 @@
 <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-
-</body>
-</html>

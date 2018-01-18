@@ -17,8 +17,8 @@
      die('Query faild') . mysqli_error($connection);
    }
 
-   $db_username = 'l';
-   $db_password = 'l';
+   $db_username = '';
+   $db_password = '';
    while ($row = mysqli_fetch_array($select_user_query)) {
     $db_id = $row['id'];
     $db_username = $row['username'];
@@ -28,6 +28,7 @@
 
    if ($username === $db_username && $password === $db_password) {
      $_SESSION['username'] = $db_username;
+     $_SESSION['id'] = $db_id;
      header("Location: index.php");
    }
    else {

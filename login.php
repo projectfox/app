@@ -1,4 +1,5 @@
 <?php
+  $title = 'logga in';
   $bodyID = "login";
   include 'includes/header.php';
   session_start();

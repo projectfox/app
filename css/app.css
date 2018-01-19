@@ -13,9 +13,6 @@ html, body {
   height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
 }
-body {
-margin: 0;
-}
 
 #login, #register{
   display: flex;
@@ -23,16 +20,18 @@ margin: 0;
   justify-content: center;
   align-items: center;
 }
-
-
+body {
+  display: block;
+  margin: 0;
+}
 .login {
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0,);
   background: #eee;
   border-radius:5px;
   padding: 60px;
   width: 360px;
-
+  text-align: center;
 }
-
 .login h3 {
   margin: 0 auto 10px;
 }
@@ -61,4 +60,18 @@ margin: 0;
   display: block;
   font-size: 14px;
   margin: 10px auto 0;
+}
+nav {
+background: #242424;
+color: #fff;
+line-height: 80px;
+padding: 0 20px;
+text-align: center;
+}
+nav a {
+  color: #ddd;
+  float: right;
+}
+nav h1 {
+  margin: 0 auto;
 }

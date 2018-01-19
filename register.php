@@ -1,5 +1,6 @@
 <?php
   $title = "registrera";
+  $bodyID = "register";
   include "includes/header.php";
   session_start();
   $errorMessage = '';

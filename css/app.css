@@ -14,11 +14,17 @@ html, body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 body {
-display: flex;
-justify-content: center;
-align-items: center;
 margin: 0;
 }
+
+#login, #register{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .login {
   background: #eee;
   border-radius:5px;

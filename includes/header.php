@@ -10,4 +10,4 @@
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/animate.css">
 </head>
-<body>
+<body id="<?php echo $bodyID; ?>">

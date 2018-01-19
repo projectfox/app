@@ -1,5 +1,6 @@
 <?php
-  include 'includes/db.php';
+  $bodyID = "login";
+  include 'includes/header.php';
   session_start();
   $errorMessage = '';
 

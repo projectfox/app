@@ -31,6 +31,7 @@
           die("Query faild") . mysqli_error($connection);
       }
       header("Location: login.php");
+
     }
   }
 ?>
@@ -39,6 +40,7 @@
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
   <input type="submit" name="register" value="Registrera">
+  <a href="login.php"> logga in </a>
   <?php echo $errorMessage; ?>
 </form>
 </body>

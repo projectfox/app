@@ -12,7 +12,7 @@ include "includes/header.php";
   <a href="logout.php"> Logga ut <?php echo $_SESSION['username']; ?></a>
     <h1>App</h1>
   </nav>
-  <h1>välkommen <?php echo $_SESSION['username']; ?></h1>
+
 
   <section>
     <h2>att gör</h2>
@@ -34,7 +34,7 @@ include "includes/header.php";
     </form>
   </section>
 <?php else : ?>
-  <?php header('LOCATION: login.php'); ?>
+  <?php header('Location: login.php'); ?>
 <?php endif; ?>
 
 </body>

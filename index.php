@@ -25,7 +25,7 @@ include "includes/header.php";
         echo "<li>" . $row['tittle'] . "</li>";
       }
        ?>
-      
+
     </ul>
     <form action="index.php" method="post">
       <input type="text" name="taskName">
@@ -34,7 +34,7 @@ include "includes/header.php";
     </form>
   </section>
 <?php else : ?>
-  <h1>Inloggning upptäcktes inte</h1>
+  <?php header('LOCATION: login.php'); ?>
 <?php endif; ?>
 
 </body>

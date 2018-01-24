@@ -52,8 +52,8 @@
   <h3>Logga in</h3>
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
-  <input type="submit" name="login" value="Logga in">
-  <a href="register.php">Registera dig här<a/>
+  <input type="submit"class="button" name="login" value="Logga in">
+  <a href="register.php"class='button'> sign up </a>
   <?php echo $errorMessage; ?>
 </form>
 

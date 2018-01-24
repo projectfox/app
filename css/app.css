@@ -13,16 +13,35 @@ html, body {
   height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+body {
+  display: block;
+  margin: 0;
+}
+.button {
+  margin: 20px auto;
+  background: #fff;
+  border: none;
+  display:block;
+  color: black;
+  line-height: 30px;
+  text-decoration: none;
+  width: 60%;
+  text-transform: uppercase;
+}
+a.button {
+  background: ;
+}
+input[name="login"].button {
+  background:red; ;
+}
+input[name="register"].button {
+  background:blue; ;
+}
 #login, #register{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-body {
-  display: block;
-  margin: 0;
 }
 .login {
   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0,);
@@ -34,32 +53,6 @@ body {
 }
 .login h3 {
   margin: 0 auto 10px;
-}
-
-.login input{
-  margin: 20px auto 0;
-  padding: 20px;
-  display: block;
-  width: 260;
-}
-
- .login input [type=submit] {
-   background: #ccc
-   border: none;
-   border-radius: 10;
-   color: #fff;
-   font-weight: bold;
-   text-transform: uppercase;
-   letter-spacing: 1px;
- }
-.login input[type=submit]:hover {
-  background: #ffff
- }
-.login a{
-  color: black;
-  display: block;
-  font-size: 14px;
-  margin: 10px auto 0;
 }
 nav {
 background: #242424;
@@ -92,5 +85,8 @@ section{
 section h2{
   margin: 0 auto;
   text-align: center;
+}
 
+section ul li a {
+  float: right;
 }

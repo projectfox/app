@@ -1,92 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+/* Layout */
 
-* {
-  box-sizing: border-box;
-}
-html {
-background: #ee0979;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
 html, body {
   height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
 }
-body {
-  display: block;
-  margin: 0;
-}
-.button {
-  margin: 20px auto;
-  background: #fff;
-  border: none;
-  display:block;
-  color: black;
-  line-height: 30px;
-  text-decoration: none;
-  width: 60%;
-  text-transform: uppercase;
-}
-a.button {
-  background: ;
-}
-input[name="login"].button {
-  background:red; ;
-}
-input[name="register"].button {
-  background:blue; ;
-}
-#login, #register{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.login {
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0,);
-  background: #eee;
-  border-radius:5px;
-  padding: 60px;
-  width: 360px;
-  text-align: center;
-}
-.login h3 {
-  margin: 0 auto 10px;
-}
-nav {
-background: #242424;
-color: #fff;
-height: 80px;
-line-height: 80px;
-padding: 0 20px;
-position: relative;
-text-align: center;
-}
-nav a {
-  color: #ddd;
-  float: right;
-}
-/*logo*/
-nav h1 {
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
+/* Layout End */
 
+/* land page */
+video#videoContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
 }
-section{
-  background: #fff;
-  margin: 100px auto 0;
-  width: 320px;
-  padding: 20px;
-}
-section h2{
-  margin: 0 auto;
-  text-align: center;
-}
+/* land page end */
 
-section ul li a {
-  float: right;
+ h1{
+  color: #cccc;
+  border-radius:
+}
+ main{
+  background: #fff;
+  height: 520px;
+  width: 520px;
 }

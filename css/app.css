@@ -7,6 +7,7 @@ html, body {
 
 /* land page */
 video#videoContainer {
+    object-fit: cover;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -19,17 +20,64 @@ video#videoContainer {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
-/* land page end */
 
- h1{
-  color: #cccc;
-  border-radius:
+/* splash */
+#splashScreen{
+  align-items: center;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  display: fixed;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
 }
- main{
-  background: #fff;
-  height: 520px;
+#splashScreen::before {
+animation: splashScreenAinmation 2.50s both;
+background: url(../img/CocaCola_logo_2.png) no-repeat center ;
+content:'';
+display: block;
+height: 148px;
+width: 220px;
+}
+
+/* splash */
+ main {
   width: 520px;
+  text-align: center;
 }
+
+/* img längd upp/ner */
+  main img{
+    margin: 250 auto 250px;
+  }
+
+  main a{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    margin: auto 15px ;
+}
+
+/* animations */
+@keyframes splashScreenAinmation {
+from {
+    opacity: 0;
+    transform: translate3d(0, -300%, 0);
+  }
+  75% {
+    opacity: 50;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 0%, 0);
+  }
+ }
+/* animations END */

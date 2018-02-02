@@ -12,8 +12,12 @@ include 'includes/header.php';
 
 
   <main class="animate fadeInDown">
-    <img src="img/CocaCola_logo_2.png" class="img-fluid" alt="App">
-    <a href=""></a>
+    <img src="img/CocaCola_logo_2.png" class="img-fluid" alt="CocaCola">
+    <p>hej</p>
+    <form class="button" action="index.html" method="post">
+      <a href="login.php"class='button'>Sign In</a>
+      <a href="register.php"class='button'> Sign Up </a>
+    </form>
   </main>
 
 <?php include 'includes/footer.php'; ?>

@@ -31,32 +31,23 @@
    if ($username === $db_username && $password === $db_password) {
      $_SESSION['username'] = $db_username;
      $_SESSION['id'] = $db_id;
-     header("Location: index.php");
+     header("Location: admin.php");
    }
    else {
      $errorMessage = "<script type='text/javascript'>alert('Inloggningen misslyckades!')</script>";
    }
   }
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>< Login | App</title>
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/app.css">
-</head>
-<body>
+
 
 <form class="login animated fadeInDown" action="login.php" method="post">
-  <h3>Logga in</h3>
+  <h3>login</h3>
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
-  <input type="submit"class="button" name="login" value="Logga in">
-  <a href="register.php"class='button'> sign up </a>
+  <input type="submit"class="btn btn-outline-light" name="login" value="login">
+  <a href="register.php"class="btn btn-outline-light"> registera </a>
   <?php echo $errorMessage; ?>
 </form>
 
 
-</body>
-</html>
+<?php include "includes/footer.php"; ?>

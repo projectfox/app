@@ -39,8 +39,8 @@
   <h3>registrera</h3>
   <input type="text" name="username" placeholder='Användarnamn'>
   <input type="password" name="password" placeholder='Lösenord'>
-  <input type="submit"class="button" name="register" value="Registrera">
-  <a href="login.php"class='button'>sign in</a>
+  <input type="submit" name="register" class="btn btn-outline-light"value="registrera">
+  <a href="login.php"class="btn btn-outline-light">logga in</a>
   <?php echo $errorMessage; ?>
 </form>
 </body>

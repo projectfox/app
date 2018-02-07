@@ -24,7 +24,7 @@ if (isset($_POST['taskName'])){
    $userID = $_SESSION['id'];
 
    $query = "INSERT INTO tasks(tittle, user_id)";
-   $query .= "VALUES('$title', '$userID')";
+   $query .= "VALUES('$title', '$userID ')";
 
    $addTaskQuery = mysqli_query($connection, $query);
  }

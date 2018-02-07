@@ -1,6 +1,12 @@
 <?php
 $bodyClass = "d-flex justify-content-center align-items-center";
 include 'includes/header.php';
+
+
+
+$query = "SELECT  id FROM users";
+$result = mysqli_query($connection, $query);
+$numberfOfUsers = mysqli_num_rows($result);
 ?>
 
 <!-- video background -->
@@ -11,13 +17,11 @@ include 'includes/header.php';
 <!-- video background end -->
 
 
-  <main class="animate fadeInDown">
-    <img src="img/CocaCola_logo_2.png" class="img-fluid" alt="CocaCola">
-    <p>hej</p>
-    <form class="button" action="index.html" method="post">
-      <a href="login.php"class='button'>Sign In</a>
-      <a href="register.php"class='button'> Sign Up </a>
-    </form>
+  <main class=" col-12 col-sm-8 col-lg-4 animate fadeInDown text-center">
+    <img src="img/coca-cola.png" class="img-fluid" alt="CocaCola">
+    <p>hej <span><?php echo $numberfOfUsers;?></span></p>
+    <a href="login.php"class="btn btn-outline-light">Sign In</a>
+    <a href="register.php"class="btn btn-outline-light"> Sign Up </a>
   </main>
 
 <?php include 'includes/footer.php'; ?>

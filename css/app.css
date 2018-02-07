@@ -1,32 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*  */
 /* Layout */
-
 html, body {
   height: 100%;
+}
+body {
+  background: #cccf;
 }
 /* Layout End */
 
 /* land page */
 video#videoContainer {
-    object-fit: cover;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
+  object-fit: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
 }
 
 /* splash */
 #splashScreen{
   align-items: center;
-  background: #000;
+  background: radial-gradient(#414345, #232526);
+  background: -webkit-radial-gradient(#414345, #232526);
+  background: -o-radial-gradient(#414345, #232526);
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -39,30 +45,31 @@ video#videoContainer {
 
 }
 #splashScreen::before {
-animation: splashScreenAinmation 2.50s both;
-background: url(../img/CocaCola_logo_2.png) no-repeat center ;
-content:'';
-display: block;
-height: 148px;
-width: 220px;
-}
-
-/* splash */
- main {
-  width: 520px;
-  text-align: center;
-}
-
-/* img längd upp/ner */
-  main img{
-    margin: 250 auto 250px;
+  animation: splashScreenAinmation 2.50s both;
+  background: url(../img/coca-cola.png) no-repeat center ;
+  content:'';
+  display: block;
+  height: 400px;
+  width: 400px;
   }
 
-  main a{
-    color: #ffffff;
+  main img {
+    margin: 0 auto;
+  }
+
+  main span {
+    color: #ccc;
+    font-weight: bold;
+  }
+  main p {
+    color: #ffff;
+    font-family: 'ubuntu',sans-serif;
+    font-size: 15px;
+    text-align: center;
     text-decoration: none;
     background-color: transparent;
-    margin: auto 15px ;
+    margin: 0 auto  15px ;
+
 }
 
 /* animations */
@@ -81,3 +88,16 @@ from {
   }
  }
 /* animations END */
+#tasks {
+  background: #ccc;
+  border-radius:6px;
+  margin: 40 auto 0;
+  padding: 20px;
+  text-align: center;
+}
+#tasks {
+  font-family:'ubumtu',sans-serif;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid #00C9FF;
+  padding: 0 20px 5px;
+}
